@@ -162,7 +162,7 @@ h4 {
   display: flex;
   align-items: center;
   color: #fff;
-  background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600&q=80');
+  background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url('../imagenes/Palacio_Real_de_Madrid_Julio_2016_\(cropped\).jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -268,24 +268,6 @@ h4 {
 }
 
 /* PÁGINAS DE EVENTO */
-.migas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 20px 0;
-  font-size: .9rem;
-  color: var(--sec)
-}
-
-.migas li+li::before {
-  content: ">";
-  margin-right: 8px
-}
-
-.migas a:hover {
-  color: var(--acento)
-}
-
 .detalle {
   display: grid;
   grid-template-columns: 2fr 1fr;
