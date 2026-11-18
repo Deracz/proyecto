@@ -1,0 +1,119 @@
+/* =====================================================
+   Proyecto ASIR · Autor: Juanes
+   Solo CSS3 puro (sin JavaScript ni frameworks)
+   ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+/* Variables: paleta */
+:root{--blanco:#FFFFFF;--gris:#F6F7F9;--texto:#1A1A1A;--sec:#666666;--acento:#FF3B5C;--azul:#0070F3;--r:16px;--sombra:0 4px 16px rgba(0,0,0,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--texto);background:var(--blanco);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3,h4{line-height:1.2;margin-bottom:12px}
+.contenedor{width:min(1160px,92%);margin-inline:auto}
+
+/* NAVBAR · FLEXBOX: logo a la izquierda, menú a la derecha */
+.navbar{position:sticky;top:0;z-index:50;background:var(--blanco);box-shadow:0 1px 0 #eee}
+.navbar .contenedor{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-weight:800;font-size:1.7rem;color:var(--acento);letter-spacing:-1px}
+.menu{display:flex;align-items:center;gap:6px}
+.menu>li{position:relative}
+.menu a{display:block;padding:10px 14px;border-radius:10px;font-weight:600;transition:all .3s ease}
+.menu a:hover{background:var(--gris);color:var(--acento)}
+.menu a.btn-nav{background:var(--acento);color:#fff}
+.menu a.btn-nav:hover{background:#e0294a;color:#fff}
+/* MENÚ DESPLEGABLE: submenú oculto que aparece con :hover y :focus-within (accesible con teclado) */
+.submenu{position:absolute;top:100%;left:0;min-width:270px;background:#fff;border-radius:12px;box-shadow:var(--sombra);padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .3s ease}
+.menu li:hover>.submenu,.menu li:focus-within>.submenu{opacity:1;visibility:visible;transform:none}
+
+/* ANIMACIONES @keyframes: aparición suave y pulso del badge "Destacado" */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes pulso{0%,100%{box-shadow:0 0 0 0 rgba(255,59,92,.5)}50%{box-shadow:0 0 0 10px rgba(255,59,92,0)}}
+
+/* PARALLAX: la imagen queda fija (background-attachment: fixed) mientras el contenido se desplaza */
+.parallax{min-height:75vh;display:flex;align-items:center;color:#fff;
+  background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1600&q=80');
+  background-attachment:fixed;background-position:center;background-size:cover;background-color:#222}
+.parallax h1{font-size:clamp(2rem,6vw,3.8rem);font-weight:800;animation:fadeInUp .9s ease both}
+.parallax p{font-size:1.15rem;margin-bottom:24px;max-width:520px}
+
+/* Botones y badges */
+.btn{display:inline-block;background:var(--acento);color:#fff;padding:12px 26px;border:0;border-radius:12px;font:inherit;font-weight:700;cursor:pointer;transition:all .3s ease}
+.btn:hover{background:#e0294a;transform:translateY(-3px);box-shadow:0 8px 18px rgba(255,59,92,.35)}
+.badge{display:inline-block;padding:4px 12px;border-radius:999px;background:var(--acento);color:#fff;font-size:.78rem;font-weight:700}
+.badge.azul{background:var(--azul)}
+.destacado{animation:pulso 2s infinite}
+
+/* PORTADA · CSS GRID: tarjetas de 2 columnas por subapartado */
+.bloque{padding:48px 0 8px}
+.bloque h2{font-size:2rem}
+.bloque h3{margin:28px 0 16px;color:var(--sec)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sombra);overflow:hidden;transition:all .3s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(0,0,0,.14)}
+.card img{width:100%;height:210px;object-fit:cover;background:var(--gris)}
+.card-body{padding:18px}
+.card-body p{color:var(--sec)}
+
+/* PÁGINAS DE EVENTO · GRID 2 columnas: contenido + tarjeta lateral sticky */
+.migas{display:flex;flex-wrap:wrap;gap:8px;padding:20px 0;font-size:.9rem;color:var(--sec)}
+.migas li+li::before{content:">";margin-right:8px}
+.migas a:hover{color:var(--acento)}
+.detalle{display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:start;padding-bottom:48px}
+.contenido section{margin-top:32px}
+.contenido h1{font-size:2.2rem;margin-top:16px}
+.lead{color:var(--sec);font-size:1.1rem}
+/* CARRUSEL CSS PURO: Flexbox + scroll horizontal con scroll-snap */
+.carrusel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:var(--r);margin-bottom:8px}
+.carrusel img{flex:0 0 100%;height:420px;object-fit:cover;scroll-snap-align:center;background:var(--gris)}
+.pista{font-size:.85rem;color:var(--sec);margin-bottom:12px}
+.disfrutar{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.disfrutar li{background:var(--gris);padding:14px;border-radius:12px;transition:all .3s ease}
+.disfrutar li:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.info div{background:var(--gris);padding:14px;border-radius:12px}
+.mapa iframe{width:100%;height:350px;border:0;border-radius:var(--r);margin-top:12px}
+.resumen{position:sticky;top:90px;background:#fff;border-radius:var(--r);box-shadow:var(--sombra);padding:24px}
+.resumen .btn{display:block;text-align:center;margin-top:16px}
+.precio{font-size:2rem;font-weight:800}
+.nota{color:var(--sec);font-size:.85rem}
+
+/* Contacto */
+.contacto-form{padding:16px 0 48px;max-width:780px}
+.contacto-form h1,main>h1{margin:24px 0}
+fieldset{border:1px solid #e4e6ea;border-radius:var(--r);padding:20px;margin-bottom:20px}
+legend{padding:0 10px;font-weight:700;color:var(--acento)}
+.campos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+label{display:block;font-weight:600;font-size:.92rem}
+input,select,textarea{width:100%;margin-top:6px;padding:11px 12px;border:1px solid #d5d8de;border-radius:12px;font:inherit;background:var(--gris);transition:all .3s ease}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--azul);background:#fff}
+label.inline{display:flex;align-items:center;gap:8px;margin-top:10px;font-weight:400}
+label.inline input{width:auto;margin:0}
+
+/* FOOTER · GRID de 4 columnas */
+.footer{background:var(--gris);padding:48px 0 24px;margin-top:48px}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.footer h4{margin-bottom:12px}
+.footer li{color:var(--sec);margin-bottom:6px}
+.footer a:hover{color:var(--acento)}
+.creditos{margin-top:32px;padding-top:16px;border-top:1px solid #dde0e5;color:var(--sec);font-size:.85rem}
+
+/* MEDIA QUERIES · TABLET (≤992px): detalle y footer se reorganizan */
+@media (max-width:992px){
+  .detalle{grid-template-columns:1fr}
+  .resumen{position:static}
+  .footer-grid{grid-template-columns:repeat(3,1fr)}
+  .carrusel img{height:340px}
+}
+/* MEDIA QUERIES · MÓVIL (≤600px): todo a 1 columna, menú vertical y mapas más bajos */
+@media (max-width:600px){
+  .navbar .contenedor{flex-direction:column;padding:10px 0}
+  .menu{flex-wrap:wrap;justify-content:center}
+  .submenu{display:none}               /* en móvil se navega desde las tarjetas */
+  .grid,.disfrutar,.info,.campos,.footer-grid{grid-template-columns:1fr}
+  .parallax{background-attachment:scroll} /* el parallax fijo falla en móviles */
+  .carrusel img{height:240px}
+  .mapa iframe{height:260px}
+}

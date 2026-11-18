@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+  ====== IDENTIFICACIÓN DEL APARTADO ======
+  Autor / Integrante : Juanes
+  Apartado           : Contacto de Contacto y Reservas VIP
+  Subapartado        : Contacto HTML5
+  Actividad          : Gestión de reservas
+  =========================================
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Noche en Madrid</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR: Flexbox (.navbar .contenedor) + menú desplegable en CSS puro (:hover / :focus-within) -->
+  <header class="navbar"><div class="contenedor">
+    <a class="logo" href="index.html">Noche en Madrid</a>
+    <nav aria-label="Principal"><ul class="menu">
+      <li><a href="index.html#nocturno">Nocturno ▾</a><ul class="submenu"><li><a href="eventos/mix-1.html">Taller de mixología clásica</a></li><li><a href="eventos/mix-2.html">Cata de destilados premium</a></li><li><a href="eventos/live-1.html">Cena con jazz en directo</a></li><li><a href="eventos/live-2.html">Noche de rock en directo con cena</a></li></ul></li>
+      <li><a href="index.html#lujo">Lujo ▾</a><ul class="submenu"><li><a href="eventos/roof-1.html">Cócteles con vistas a Madrid</a></li><li><a href="eventos/roof-2.html">Atardecer premium con bocados</a></li><li><a href="eventos/cab-1.html">Noche de cabaret y burlesque</a></li><li><a href="eventos/cab-2.html">Club VIP con mesa reservada</a></li></ul></li>
+
+      <li><a class="btn-nav" href="contacto.html">Contacto</a></li>
+    </ul></nav>
+  </div></header>
+
+  <!--
+  ====== IDENTIFICACIÓN DEL APARTADO ======
+  Autor / Integrante : Juanes
+  Apartado           : Contacto de Contacto y Reservas VIP
+  Subapartado        : Contacto HTML5
+  Actividad          : Gestión de reservas
+  =========================================
+-->
+  <main class="contenedor">
+    <h1>Contacto y reservas VIP</h1>
+    <!-- Contacto: fieldset + legend, validación HTML5 (required, email, tel, date) y Grid interno (.campos) -->
+    <form action="#" method="post" class="contacto-form">
+      <fieldset><legend>Tus datos</legend><div class="campos">
+        <label>Nombre<input type="text" name="nombre" required></label>
+        <label>Apellidos<input type="text" name="apellidos" required></label>
+        <label>Correo electrónico<input type="email" name="email" required></label>
+        <label>Teléfono<input type="tel" name="tel" pattern="[0-9]{9}" placeholder="600123456" required></label>
+      </div></fieldset>
+      <fieldset><legend>Tu reserva</legend><div class="campos">
+        <label>Actividad<select name="actividad" required><option value="">Elige una actividad</option><optgroup label="Nocturno"><option>Taller de mixología clásica</option><option>Cata de destilados premium</option><option>Cena con jazz en directo</option><option>Noche de rock en directo con cena</option></optgroup><optgroup label="Lujo"><option>Cócteles con vistas a Madrid</option><option>Atardecer premium con bocados</option><option>Noche de cabaret y burlesque</option><option>Club VIP con mesa reservada</option></optgroup></select></label>
+        <label>Fecha<input type="date" name="fecha" required></label>
+        <label>Personas<input type="number" name="personas" min="1" max="10" value="2" required></label>
+      </div>
+      <p>Zona preferida:</p>
+      <label class="inline"><input type="radio" name="zona" value="barra" checked> Barra</label>
+      <label class="inline"><input type="radio" name="zona" value="mesa"> Mesa</label>
+      <label class="inline"><input type="radio" name="zona" value="vip"> Zona VIP</label></fieldset>
+      <fieldset><legend>Comentarios</legend>
+        <label>Cuéntanos algo más<textarea name="msg" rows="4"></textarea></label>
+        <label class="inline"><input type="checkbox" name="condiciones" required> Acepto las condiciones y la política de privacidad</label>
+        <label class="inline"><input type="checkbox" name="news"> Quiero recibir novedades</label>
+      </fieldset>
+      <button class="btn" type="submit">Enviar solicitud</button>
+    </form>
+  </main>
+
+  <!-- FOOTER: CSS Grid de 3 columnas (.footer-grid); 1 columna en móvil -->
+  <footer class="footer"><div class="contenedor">
+    <div class="footer-grid">
+      <div><h4>Noche en Madrid</h4><ul><li><a href="index.html#nocturno">Nocturno</a></li><li><a href="index.html#lujo">Lujo</a></li></ul></div>
+      <div><h4>Ciudades</h4><ul><li>Madrid</li><li>Barcelona</li><li>Valencia</li><li>Sevilla</li></ul></div>
+      <div><h4>Soporte</h4><ul><li><a href="contacto.html">Contacto</a></li><li>Ayuda</li><li>Condiciones</li></ul></div>
+
+    </div>
+    <p class="creditos">Proyecto ASIR · Lenguaje de Marcas · Manuel, Juanes y Lázaro. Diseño con fines educativos.</p>
+  </div></footer>
+</body>
+</html>

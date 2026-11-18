@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+  ====== IDENTIFICACIÓN DEL APARTADO ======
+  Autor / Integrante : Juanes
+  Apartado           : Nocturno
+  Subapartado        : Shows en vivo de Jazz, Rock y Cena
+  Actividad          : Noche de rock en directo con cena (actividad 2 de 2)
+  =========================================
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noche de rock en directo con cena | Noche en Madrid</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR: Flexbox (.navbar .contenedor) + menú desplegable en CSS puro (:hover / :focus-within) -->
+  <header class="navbar"><div class="contenedor">
+    <a class="logo" href="../index.html">Noche en Madrid</a>
+    <nav aria-label="Principal"><ul class="menu">
+      <li><a href="../index.html#nocturno">Nocturno ▾</a><ul class="submenu"><li><a href="../eventos/mix-1.html">Taller de mixología clásica</a></li><li><a href="../eventos/mix-2.html">Cata de destilados premium</a></li><li><a href="../eventos/live-1.html">Cena con jazz en directo</a></li><li><a href="../eventos/live-2.html">Noche de rock en directo con cena</a></li></ul></li>
+      <li><a href="../index.html#lujo">Lujo ▾</a><ul class="submenu"><li><a href="../eventos/roof-1.html">Cócteles con vistas a Madrid</a></li><li><a href="../eventos/roof-2.html">Atardecer premium con bocados</a></li><li><a href="../eventos/cab-1.html">Noche de cabaret y burlesque</a></li><li><a href="../eventos/cab-2.html">Club VIP con mesa reservada</a></li></ul></li>
+
+      <li><a class="btn-nav" href="../contacto.html">Contacto</a></li>
+    </ul></nav>
+  </div></header>
+
+  <!--
+  ====== IDENTIFICACIÓN DEL APARTADO ======
+  Autor / Integrante : Juanes
+  Apartado           : Nocturno
+  Subapartado        : Shows en vivo de Jazz, Rock y Cena
+  Actividad          : Noche de rock en directo con cena (actividad 2 de 2)
+  =========================================
+-->
+  <main class="contenedor">
+    <nav aria-label="Breadcrumb"><ol class="migas">
+      <li><a href="../index.html">Inicio</a></li><li><a href="../index.html#nocturno">Nocturno</a></li>
+      <li><a href="../index.html#live">Shows en vivo de Jazz, Rock y Cena</a></li><li aria-current="page">Noche de rock en directo con cena</li>
+    </ol></nav>
+    <!-- LAYOUT DETALLE: CSS Grid de 2 columnas (contenido + tarjeta lateral sticky) -->
+    <div class="detalle">
+      <article class="contenido">
+        <!-- CARRUSEL CSS PURO: Flexbox + overflow-x:auto + scroll-snap-type (sin JavaScript) -->
+        <div class="carrusel">
+      <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=1200&q=80" alt="Noche de rock en directo con cena, foto 1" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=80" alt="Noche de rock en directo con cena, foto 2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80" alt="Noche de rock en directo con cena, foto 3" loading="lazy">
+        </div>
+        <p class="pista">Desliza para ver más fotos</p>
+        <span class="badge">Nocturno</span> <span class="badge azul">Shows en vivo de Jazz, Rock y Cena</span>
+        <h1>Noche de rock en directo con cena</h1>
+        <p class="lead">Hamburguesas, tapas y una banda de rock en directo en el corazón de Malasaña. Planazo para ir con amigos.</p>
+        <section><h2>Qué vas a disfrutar</h2><ul class="disfrutar"><li>🎸 Banda de rock en directo</li><li>🍔 Cena informal incluida</li><li>🍺 Primera consumición</li><li>🔥 Ambiente de Malasaña</li></ul></section>
+        <section><h2>Información general</h2>
+          <div class="info"><div><strong>Horario</strong><br>Vie–Sáb · 21:30</div><div><strong>Duración</strong><br>3 h</div><div><strong>Edad</strong><br>+18</div><div><strong>Lugar</strong><br>Café La Palma</div></div>
+        </section>
+        <section class="mapa"><h2>Ubicación</h2><p>Calle de la Palma 62, 28004 Madrid</p>
+          <iframe src="https://www.google.com/maps?q=Caf%C3%A9%20La%20Palma%2C%20Calle%20de%20la%20Palma%2062%2C%2028004%20Madrid&output=embed" title="Mapa de Café La Palma" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </article>
+      <aside class="resumen"><span class="badge destacado">Destacado</span>
+        <h3>Noche de rock en directo con cena</h3><p class="precio">30 €</p><p class="nota">Precio orientativo por persona</p>
+        <a class="btn" href="../contacto.html">Reservar plaza</a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER: CSS Grid de 3 columnas (.footer-grid); 1 columna en móvil -->
+  <footer class="footer"><div class="contenedor">
+    <div class="footer-grid">
+      <div><h4>Noche en Madrid</h4><ul><li><a href="../index.html#nocturno">Nocturno</a></li><li><a href="../index.html#lujo">Lujo</a></li></ul></div>
+      <div><h4>Ciudades</h4><ul><li>Madrid</li><li>Barcelona</li><li>Valencia</li><li>Sevilla</li></ul></div>
+      <div><h4>Soporte</h4><ul><li><a href="../contacto.html">Contacto</a></li><li>Ayuda</li><li>Condiciones</li></ul></div>
+
+    </div>
+    <p class="creditos">Proyecto ASIR · Lenguaje de Marcas · Manuel, Juanes y Lázaro. Diseño con fines educativos.</p>
+  </div></footer>
+</body>
+</html>

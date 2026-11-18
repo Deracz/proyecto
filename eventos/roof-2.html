@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+  ====== IDENTIFICACIÓN DEL APARTADO ======
+  Autor / Integrante : Juanes
+  Apartado           : Lujo
+  Subapartado        : Cócteles con skyline y bocados en la azotea
+  Actividad          : Atardecer premium con bocados (actividad 2 de 2)
+  =========================================
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atardecer premium con bocados | Noche en Madrid</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR: Flexbox (.navbar .contenedor) + menú desplegable en CSS puro (:hover / :focus-within) -->
+  <header class="navbar"><div class="contenedor">
+    <a class="logo" href="../index.html">Noche en Madrid</a>
+    <nav aria-label="Principal"><ul class="menu">
+      <li><a href="../index.html#nocturno">Nocturno ▾</a><ul class="submenu"><li><a href="../eventos/mix-1.html">Taller de mixología clásica</a></li><li><a href="../eventos/mix-2.html">Cata de destilados premium</a></li><li><a href="../eventos/live-1.html">Cena con jazz en directo</a></li><li><a href="../eventos/live-2.html">Noche de rock en directo con cena</a></li></ul></li>
+      <li><a href="../index.html#lujo">Lujo ▾</a><ul class="submenu"><li><a href="../eventos/roof-1.html">Cócteles con vistas a Madrid</a></li><li><a href="../eventos/roof-2.html">Atardecer premium con bocados</a></li><li><a href="../eventos/cab-1.html">Noche de cabaret y burlesque</a></li><li><a href="../eventos/cab-2.html">Club VIP con mesa reservada</a></li></ul></li>
+
+      <li><a class="btn-nav" href="../contacto.html">Contacto</a></li>
+    </ul></nav>
+  </div></header>
+
+  <!--
+  ====== IDENTIFICACIÓN DEL APARTADO ======
+  Autor / Integrante : Juanes
+  Apartado           : Lujo
+  Subapartado        : Cócteles con skyline y bocados en la azotea
+  Actividad          : Atardecer premium con bocados (actividad 2 de 2)
+  =========================================
+-->
+  <main class="contenedor">
+    <nav aria-label="Breadcrumb"><ol class="migas">
+      <li><a href="../index.html">Inicio</a></li><li><a href="../index.html#lujo">Lujo</a></li>
+      <li><a href="../index.html#roof">Cócteles con skyline y bocados en la azotea</a></li><li aria-current="page">Atardecer premium con bocados</li>
+    </ol></nav>
+    <!-- LAYOUT DETALLE: CSS Grid de 2 columnas (contenido + tarjeta lateral sticky) -->
+    <div class="detalle">
+      <article class="contenido">
+        <!-- CARRUSEL CSS PURO: Flexbox + overflow-x:auto + scroll-snap-type (sin JavaScript) -->
+        <div class="carrusel">
+      <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80" alt="Atardecer premium con bocados, foto 1" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" alt="Atardecer premium con bocados, foto 2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1200&q=80" alt="Atardecer premium con bocados, foto 3" loading="lazy">
+        </div>
+        <p class="pista">Desliza para ver más fotos</p>
+        <span class="badge">Lujo</span> <span class="badge azul">Cócteles con skyline y bocados en la azotea</span>
+        <h1>Atardecer premium con bocados</h1>
+        <p class="lead">Atardecer en una azotea de hotel de lujo con cócteles, música chill-out y una selección de bocados.</p>
+        <section><h2>Qué vas a disfrutar</h2><ul class="disfrutar"><li>🌅 Puesta de sol sobre los tejados</li><li>🍸 Dos cócteles premium</li><li>🍤 Tabla de bocados</li><li>🎧 DJ chill-out</li></ul></section>
+        <section><h2>Información general</h2>
+          <div class="info"><div><strong>Horario</strong><br>Diario · 19:00</div><div><strong>Duración</strong><br>2 h</div><div><strong>Edad</strong><br>+18</div><div><strong>Lugar</strong><br>Radio Rooftop (ME Madrid)</div></div>
+        </section>
+        <section class="mapa"><h2>Ubicación</h2><p>Plaza de Santa Ana 14, 28012 Madrid</p>
+          <iframe src="https://www.google.com/maps?q=Radio%20Rooftop%20%28ME%20Madrid%29%2C%20Plaza%20de%20Santa%20Ana%2014%2C%2028012%20Madrid&output=embed" title="Mapa de Radio Rooftop (ME Madrid)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </article>
+      <aside class="resumen"><span class="badge destacado">Destacado</span>
+        <h3>Atardecer premium con bocados</h3><p class="precio">65 €</p><p class="nota">Precio orientativo por persona</p>
+        <a class="btn" href="../contacto.html">Reservar plaza</a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER: CSS Grid de 3 columnas (.footer-grid); 1 columna en móvil -->
+  <footer class="footer"><div class="contenedor">
+    <div class="footer-grid">
+      <div><h4>Noche en Madrid</h4><ul><li><a href="../index.html#nocturno">Nocturno</a></li><li><a href="../index.html#lujo">Lujo</a></li></ul></div>
+      <div><h4>Ciudades</h4><ul><li>Madrid</li><li>Barcelona</li><li>Valencia</li><li>Sevilla</li></ul></div>
+      <div><h4>Soporte</h4><ul><li><a href="../contacto.html">Contacto</a></li><li>Ayuda</li><li>Condiciones</li></ul></div>
+
+    </div>
+    <p class="creditos">Proyecto ASIR · Lenguaje de Marcas · Manuel, Juanes y Lázaro. Diseño con fines educativos.</p>
+  </div></footer>
+</body>
+</html>
